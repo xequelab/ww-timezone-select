@@ -1,12 +1,18 @@
 <template>
   <div class="timezone-select" ref="selectContainer">
-    <div 
-      class="timezone-select__selected" 
+    <div
+      class="timezone-select__selected"
       @click="toggleDropdown"
-      :style="{ 
-        borderColor: content.borderColor, 
+      :style="{
+        borderColor: content.borderColor,
+        borderWidth: content.borderWidth,
         backgroundColor: content.backgroundColor,
-        color: content.textColor
+        color: content.textColor,
+        fontSize: content.fontSize,
+        borderRadius: content.borderRadius,
+        padding: content.padding,
+        minHeight: content.minHeight,
+        fontWeight: content.fontWeight
       }"
     >
       <span v-if="selectedTimezone">{{ selectedTimezone.label }}</span>
@@ -18,14 +24,14 @@
       </div>
     </div>
     
-    <div v-if="isOpen" class="timezone-select__dropdown" :style="{ borderColor: content.borderColor }">
+    <div v-if="isOpen" class="timezone-select__dropdown" :style="{ borderColor: content.borderColor, borderWidth: content.borderWidth, borderRadius: content.borderRadius, maxHeight: content.dropdownMaxHeight }">
       <div class="timezone-select__search">
-        <input 
-          type="text" 
-          v-model="searchQuery" 
-          placeholder="Search timezone..." 
+        <input
+          type="text"
+          v-model="searchQuery"
+          placeholder="Search timezone..."
           @click.stop
-          :style="{ borderColor: content.borderColor }"
+          :style="{ borderColor: content.borderColor, borderWidth: content.borderWidth, borderRadius: content.borderRadius, fontSize: content.fontSize }"
         />
       </div>
       
@@ -338,14 +344,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-style: solid;
     cursor: pointer;
-    background-color: #fff;
-    min-height: 42px;
     transition: border-color 0.2s ease;
-    
+
     &:hover {
       border-color: #999;
     }
@@ -371,11 +373,9 @@ export default {
     left: 0;
     width: 100%;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    border-style: solid;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     z-index: 1000;
-    max-height: 400px;
     display: flex;
     flex-direction: column;
   }
@@ -383,14 +383,12 @@ export default {
   &__search {
     padding: 8px;
     border-bottom: 1px solid #eee;
-    
+
     input {
       width: 100%;
       padding: 8px 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-      
+      border-style: solid;
+
       &:focus {
         outline: none;
         border-color: #007bff;

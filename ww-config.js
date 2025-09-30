@@ -177,6 +177,139 @@ export default {
         tooltip: 'The background color for Brazilian timezones on hover',
       },
       /* wwEditor:end */
+    },
+    fontSize: {
+      label: {
+        en: 'Font size',
+        pt: 'Tamanho da fonte'
+      },
+      type: 'Length',
+      bindable: true,
+      section: 'style',
+      defaultValue: '14px',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing a size (e.g., "14px", "1rem")',
+      },
+      propertyHelp: {
+        tooltip: 'The font size of the text',
+      },
+      /* wwEditor:end */
+    },
+    borderRadius: {
+      label: {
+        en: 'Border radius',
+        pt: 'Raio da borda'
+      },
+      type: 'Length',
+      bindable: true,
+      section: 'style',
+      defaultValue: '4px',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing a size (e.g., "4px", "0.5rem")',
+      },
+      propertyHelp: {
+        tooltip: 'The border radius of the select field',
+      },
+      /* wwEditor:end */
+    },
+    borderWidth: {
+      label: {
+        en: 'Border width',
+        pt: 'Espessura da borda'
+      },
+      type: 'Length',
+      bindable: true,
+      section: 'style',
+      defaultValue: '1px',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing a size (e.g., "1px", "2px")',
+      },
+      propertyHelp: {
+        tooltip: 'The border width of the select field',
+      },
+      /* wwEditor:end */
+    },
+    padding: {
+      label: {
+        en: 'Padding',
+        pt: 'Espaçamento interno'
+      },
+      type: 'Length',
+      bindable: true,
+      section: 'style',
+      defaultValue: '10px 12px',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing padding (e.g., "10px 12px")',
+      },
+      propertyHelp: {
+        tooltip: 'The padding inside the select field',
+      },
+      /* wwEditor:end */
+    },
+    minHeight: {
+      label: {
+        en: 'Min height',
+        pt: 'Altura mínima'
+      },
+      type: 'Length',
+      bindable: true,
+      section: 'style',
+      defaultValue: '42px',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing a size (e.g., "42px")',
+      },
+      propertyHelp: {
+        tooltip: 'The minimum height of the select field',
+      },
+      /* wwEditor:end */
+    },
+    dropdownMaxHeight: {
+      label: {
+        en: 'Dropdown max height',
+        pt: 'Altura máxima do dropdown'
+      },
+      type: 'Length',
+      bindable: true,
+      section: 'style',
+      defaultValue: '400px',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing a size (e.g., "400px")',
+      },
+      propertyHelp: {
+        tooltip: 'The maximum height of the dropdown menu',
+      },
+      /* wwEditor:end */
+    },
+    fontWeight: {
+      label: {
+        en: 'Font weight',
+        pt: 'Peso da fonte'
+      },
+      type: 'Text',
+      bindable: true,
+      section: 'style',
+      defaultValue: '400',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing font weight (e.g., "400", "bold")',
+      },
+      propertyHelp: {
+        tooltip: 'The font weight of the text',
+      },
+      /* wwEditor:end */
     }
   },
   triggerEvents: [
