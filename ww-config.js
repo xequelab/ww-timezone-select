@@ -203,23 +203,25 @@ export default {
         pt: 'Família da fonte'
       },
       type: 'TextSelect',
+      options: {
+        options: [
+          { value: 'default', label: 'Default' },
+          { value: 'Arial, sans-serif', label: 'Arial' },
+          { value: 'Helvetica, sans-serif', label: 'Helvetica' },
+          { value: 'Georgia, serif', label: 'Georgia' },
+          { value: 'Times New Roman, serif', label: 'Times New Roman' },
+          { value: 'Courier New, monospace', label: 'Courier New' },
+          { value: 'Verdana, sans-serif', label: 'Verdana' },
+          { value: 'Tahoma, sans-serif', label: 'Tahoma' },
+          { value: 'Trebuchet MS, sans-serif', label: 'Trebuchet MS' },
+          { value: 'Comic Sans MS, cursive', label: 'Comic Sans MS' },
+          { value: 'Impact, sans-serif', label: 'Impact' },
+          { value: 'Lucida Console, monospace', label: 'Lucida Console' },
+          { value: 'inherit', label: 'Inherit' }
+        ]
+      },
       bindable: true,
       section: 'style',
-      options: () => [
-        { value: 'default', label: 'Default' },
-        { value: 'Arial, sans-serif', label: 'Arial' },
-        { value: 'Helvetica, sans-serif', label: 'Helvetica' },
-        { value: 'Georgia, serif', label: 'Georgia' },
-        { value: 'Times New Roman, serif', label: 'Times New Roman' },
-        { value: 'Courier New, monospace', label: 'Courier New' },
-        { value: 'Verdana, sans-serif', label: 'Verdana' },
-        { value: 'Tahoma, sans-serif', label: 'Tahoma' },
-        { value: 'Trebuchet MS, sans-serif', label: 'Trebuchet MS' },
-        { value: 'Comic Sans MS, cursive', label: 'Comic Sans MS' },
-        { value: 'Impact, sans-serif', label: 'Impact' },
-        { value: 'Lucida Console, monospace', label: 'Lucida Console' },
-        { value: 'inherit', label: 'Inherit' }
-      ],
       defaultValue: 'default',
       /* wwEditor:start */
       bindingValidation: {
@@ -256,19 +258,21 @@ export default {
         pt: 'Peso da fonte'
       },
       type: 'TextSelect',
+      options: {
+        options: [
+          { value: '100', label: '100 - Thin' },
+          { value: '200', label: '200 - Extra Light' },
+          { value: '300', label: '300 - Light' },
+          { value: '400', label: '400 - Normal' },
+          { value: '500', label: '500 - Medium' },
+          { value: '600', label: '600 - Semi Bold' },
+          { value: '700', label: '700 - Bold' },
+          { value: '800', label: '800 - Extra Bold' },
+          { value: '900', label: '900 - Black' }
+        ]
+      },
       bindable: true,
       section: 'style',
-      options: () => [
-        { value: '100', label: '100 - Thin' },
-        { value: '200', label: '200 - Extra Light' },
-        { value: '300', label: '300 - Light' },
-        { value: '400', label: '400 - Normal' },
-        { value: '500', label: '500 - Medium' },
-        { value: '600', label: '600 - Semi Bold' },
-        { value: '700', label: '700 - Bold' },
-        { value: '800', label: '800 - Extra Bold' },
-        { value: '900', label: '900 - Black' }
-      ],
       defaultValue: '400',
       /* wwEditor:start */
       bindingValidation: {
