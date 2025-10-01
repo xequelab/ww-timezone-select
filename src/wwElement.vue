@@ -12,7 +12,8 @@
         borderRadius: content.borderRadius,
         padding: content.padding,
         minHeight: content.minHeight,
-        fontWeight: content.fontWeight
+        fontWeight: content.fontWeight,
+        fontFamily: content.fontFamily && content.fontFamily !== 'default' ? content.fontFamily : 'inherit'
       }"
     >
       <span v-if="selectedTimezone">{{ selectedTimezone.label }}</span>
@@ -29,9 +30,16 @@
         <input
           type="text"
           v-model="searchQuery"
-          placeholder="Search timezone..."
+          :placeholder="content.searchPlaceholder || 'Search timezone...'"
           @click.stop
-          :style="{ borderColor: content.borderColor, borderWidth: content.borderWidth, borderRadius: content.borderRadius, fontSize: content.fontSize }"
+          :style="{
+            borderColor: content.borderColor,
+            borderWidth: content.borderWidth,
+            borderRadius: content.borderRadius,
+            fontSize: content.fontSize,
+            fontFamily: content.fontFamily && content.fontFamily !== 'default' ? content.fontFamily : 'inherit',
+            fontWeight: content.fontWeight
+          }"
         />
       </div>
       
@@ -338,7 +346,7 @@ export default {
 .timezone-select {
   position: relative;
   width: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: inherit;
   
   &__selected {
     display: flex;
