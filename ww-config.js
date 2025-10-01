@@ -45,6 +45,25 @@ export default {
       },
       /* wwEditor:end */
     },
+    searchPlaceholder: {
+      label: {
+        en: 'Search placeholder',
+        pt: 'Placeholder de busca'
+      },
+      type: 'Text',
+      bindable: true,
+      section: 'settings',
+      defaultValue: 'Search timezone...',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string to display in the search input field',
+      },
+      propertyHelp: {
+        tooltip: 'Text to display in the search input when searching for timezones',
+      },
+      /* wwEditor:end */
+    },
     backgroundColor: {
       label: {
         en: 'Background color',
@@ -178,6 +197,42 @@ export default {
       },
       /* wwEditor:end */
     },
+    fontFamily: {
+      label: {
+        en: 'Font family',
+        pt: 'Família da fonte'
+      },
+      type: 'TextSelect',
+      bindable: true,
+      section: 'style',
+      options: {
+        choices: [
+          { value: 'default', label: 'Default' },
+          { value: 'Arial, sans-serif', label: 'Arial' },
+          { value: 'Helvetica, sans-serif', label: 'Helvetica' },
+          { value: 'Georgia, serif', label: 'Georgia' },
+          { value: 'Times New Roman, serif', label: 'Times New Roman' },
+          { value: 'Courier New, monospace', label: 'Courier New' },
+          { value: 'Verdana, sans-serif', label: 'Verdana' },
+          { value: 'Tahoma, sans-serif', label: 'Tahoma' },
+          { value: 'Trebuchet MS, sans-serif', label: 'Trebuchet MS' },
+          { value: 'Comic Sans MS, cursive', label: 'Comic Sans MS' },
+          { value: 'Impact, sans-serif', label: 'Impact' },
+          { value: 'Lucida Console, monospace', label: 'Lucida Console' },
+          { value: 'inherit', label: 'Inherit' }
+        ]
+      },
+      defaultValue: 'default',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing a font family (e.g., "Arial, sans-serif")',
+      },
+      propertyHelp: {
+        tooltip: 'The font family of the text',
+      },
+      /* wwEditor:end */
+    },
     fontSize: {
       label: {
         en: 'Font size',
@@ -194,6 +249,38 @@ export default {
       },
       propertyHelp: {
         tooltip: 'The font size of the text',
+      },
+      /* wwEditor:end */
+    },
+    fontWeight: {
+      label: {
+        en: 'Font weight',
+        pt: 'Peso da fonte'
+      },
+      type: 'TextSelect',
+      bindable: true,
+      section: 'style',
+      options: {
+        choices: [
+          { value: '100', label: '100 - Thin' },
+          { value: '200', label: '200 - Extra Light' },
+          { value: '300', label: '300 - Light' },
+          { value: '400', label: '400 - Normal' },
+          { value: '500', label: '500 - Medium' },
+          { value: '600', label: '600 - Semi Bold' },
+          { value: '700', label: '700 - Bold' },
+          { value: '800', label: '800 - Extra Bold' },
+          { value: '900', label: '900 - Black' }
+        ]
+      },
+      defaultValue: '400',
+      /* wwEditor:start */
+      bindingValidation: {
+        type: 'string',
+        tooltip: 'A string representing font weight (e.g., "400", "700")',
+      },
+      propertyHelp: {
+        tooltip: 'The font weight of the text',
       },
       /* wwEditor:end */
     },
@@ -289,25 +376,6 @@ export default {
       },
       propertyHelp: {
         tooltip: 'The maximum height of the dropdown menu',
-      },
-      /* wwEditor:end */
-    },
-    fontWeight: {
-      label: {
-        en: 'Font weight',
-        pt: 'Peso da fonte'
-      },
-      type: 'Text',
-      bindable: true,
-      section: 'style',
-      defaultValue: '400',
-      /* wwEditor:start */
-      bindingValidation: {
-        type: 'string',
-        tooltip: 'A string representing font weight (e.g., "400", "bold")',
-      },
-      propertyHelp: {
-        tooltip: 'The font weight of the text',
       },
       /* wwEditor:end */
     }
